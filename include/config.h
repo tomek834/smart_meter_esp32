@@ -9,6 +9,7 @@ struct Config {
     char mqtt_server[64];
     uint16_t mqtt_port;
     uint32_t measurement_interval; // miliseconds
+    int led_brightness;
 };
 
 extern Config config;
