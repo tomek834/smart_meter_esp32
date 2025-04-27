@@ -5,7 +5,7 @@
 #include <statusled.h>
 
 
-AsyncWebServer server(80); // Serwer HTTP
+AsyncWebServer server(80); // HTTP server on port 80
 
 void startAPMode() {
     Serial.println("Starting Access Point mode...");

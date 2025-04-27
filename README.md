@@ -39,6 +39,7 @@ A smart three-phase energy monitor based on **ESP32** and **ATM90E36** chip, wit
 - Dynamic configuration reload without full restart.
 - Optional Bluetooth configuration mode.
 - Add docker container with mqtt broker, database and grafana
+- Hardware redesign (PCB and DIN enclosure)
 
 
 ## Requirements

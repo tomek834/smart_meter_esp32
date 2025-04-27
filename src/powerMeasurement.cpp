@@ -10,7 +10,7 @@
 #define PIN_CS   10
 
 SPIClass hspi(HSPI);
-//SPIClass hspi = SPIClass(HSPI);
+
 ATM90E36 atm90e36(PIN_CS);
 bool monitorNeutral = false;
 
@@ -24,9 +24,6 @@ bool isNeutralMonitoringEnabled() {
 
 void setupPowerMeasurement() {
     hspi.begin(PIN_SCLK, PIN_MISO, PIN_MOSI, PIN_CS);
-    
-
-    // CS pin, LineFreq(60Hz), PGAGain(4), UGain, IGainA/B/C/N
     atm90e36.begin();
     Serial.println("ATM90E36 initialized using HSPI (SPI2). Three-phase mode with optional N.");
 }
@@ -69,7 +66,7 @@ bool isATM90E36Connected() {
     Serial.print("System Status 1 Register: 0x");
     Serial.println(status1, HEX);
 
-    // Jeśli oba rejestry zwracają 0x0000 lub 0xFFFF, uznajemy brak komunikacji
+    // error if status0 or status1 is 0x0000 or 0xFFFF
     bool validStatus0 = (status0 != 0x0000 && status0 != 0xFFFF);
     bool validStatus1 = (status1 != 0x0000 && status1 != 0xFFFF);
 

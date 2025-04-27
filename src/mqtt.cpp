@@ -63,7 +63,7 @@ void handleMQTT() {
     if (now - lastPublishTime > config.meas_itv) {
         lastPublishTime = now;
 
-        // Faza A
+        // Phase A
         publishMeasurement("smartmeter/voltage_a", getVoltageA());
         publishMeasurement("smartmeter/current_a", getCurrentA());
         publishMeasurement("smartmeter/active_power_a", getActivePowerA());
@@ -71,7 +71,7 @@ void handleMQTT() {
         publishMeasurement("smartmeter/apparent_power_a", getApparentPowerA());
         publishMeasurement("smartmeter/power_factor_a", getPowerFactorA());
 
-        // Faza B
+        // Phase B
         publishMeasurement("smartmeter/voltage_b", getVoltageB());
         publishMeasurement("smartmeter/current_b", getCurrentB());
         publishMeasurement("smartmeter/active_power_b", getActivePowerB());
@@ -79,7 +79,7 @@ void handleMQTT() {
         publishMeasurement("smartmeter/apparent_power_b", getApparentPowerB());
         publishMeasurement("smartmeter/power_factor_b", getPowerFactorB());
 
-        // Faza C
+        // Phase C
         publishMeasurement("smartmeter/voltage_c", getVoltageC());
         publishMeasurement("smartmeter/current_c", getCurrentC());
         publishMeasurement("smartmeter/active_power_c", getActivePowerC());
@@ -87,7 +87,7 @@ void handleMQTT() {
         publishMeasurement("smartmeter/apparent_power_c", getApparentPowerC());
         publishMeasurement("smartmeter/power_factor_c", getPowerFactorC());
 
-        // Przewód neutralny (jeśli włączone)
+        // Neutral monitoring (if enabled)
         if (config.n_monitor) {
             publishMeasurement("smartmeter/current_n", getCurrentN());
         }
