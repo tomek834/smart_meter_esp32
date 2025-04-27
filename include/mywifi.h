@@ -3,5 +3,5 @@
 
 void setupMyWiFi();
 void updateMyWiFiStatus();
-
+void startAPMode();
 #endif
