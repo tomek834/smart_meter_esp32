@@ -1,7 +1,7 @@
 
 #include <Arduino.h>
 #include <SPI.h>
-#include "ATM90E36_ESP32S3.h"
+#include "ATM90E36.h"
 #include "powerMeasurement.h"
 
 #define PIN_MOSI 11
