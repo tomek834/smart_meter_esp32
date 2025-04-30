@@ -30,6 +30,7 @@ A smart three-phase energy monitor based on **ESP32** and **ATM90E36** chip, wit
 
 ## TODO 
 
+- FreeRTOS
 - Dynamic MQTT Client ID
 - Add TLS support for MQTT communication.
 - OTA password protection
